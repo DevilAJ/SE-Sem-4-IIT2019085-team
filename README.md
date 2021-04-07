@@ -18,7 +18,7 @@
 |IIT2019086|Ankit Chauhan|<https://github.com/Mystery137>|
 
 #
-## ***Project Discription***
+## ***Project Description***
 
  **Smart Toilet Cleaning Management System** that monitors the hygiene within the toilet and generate alerts or alarms for the staff members if the toilet requires any attention.
 
