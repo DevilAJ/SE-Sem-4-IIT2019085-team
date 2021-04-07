@@ -33,7 +33,7 @@ The toilet will be equipped with turbidity and gas sensors that monitor water qu
  
  Here are the screenshots  of the application pages :-
  
- ### **Login Page**
+ ### ****Login Page****
  
   ![loginpage](https://user-images.githubusercontent.com/66028574/113858621-91786180-97c1-11eb-8f52-3e2511f7fc2f.jpeg)
   
