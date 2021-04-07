@@ -28,4 +28,8 @@ The toilet will be equipped with turbidity and gas sensors that monitor water qu
 
  Our project is based on the **Smart Toilet Management System** which  helps us in monitoring the toilet.
  
- For that purpose, we have made a web and app based gui and here are the proper description of that application :-
+ For that purpose, we have made a web and app based gui and here are the proper description of that application.
+ 
+ Here are the screenshots  of the application pages :-
+ 
+ ### Login Page
