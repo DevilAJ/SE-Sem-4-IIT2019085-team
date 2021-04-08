@@ -304,8 +304,8 @@ class reportStream extends StatelessWidget {
 }
 
 void sendMail() async {
-  String username = 'romajaiswal999@gmail.com';
-  String password = '9984756564';
+  String username = 'email';
+  String password = 'password';
 
   final smtpServer = gmail(username, password);
 
