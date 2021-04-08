@@ -5,7 +5,8 @@ import 'package:provider/provider.dart';
 import 'package:soe/models/currentUser.dart';
 import 'package:soe/services/database.dart';
 import 'package:soe/shared/constants.dart';
-import 'package:soe/shared/loading.dart';
+import 'package:mailer/mailer.dart';
+import 'package:mailer/smtp_server.dart';
 import '../components.dart';
 
 List<String> reports = [
@@ -170,6 +171,7 @@ void setData(String s) async {
   mq2 = double.parse((mq2).toStringAsFixed(2));
   print("ntu : $ntu");
   print("mq2 : $mq2");
+  if (ntu > 1.0 || mq2 > 1.0) sendMail();
   await DatabaseServices().updateSensorData(ntu.toString(), mq2.toString());
 }
 
@@ -298,5 +300,33 @@ class reportStream extends StatelessWidget {
           );
       },
     );
+  }
+}
+
+void sendMail() async {
+  String username = 'romajaiswal999@gmail.com';
+  String password = '9984756564';
+
+  final smtpServer = gmail(username, password);
+
+  final message = Message()
+    ..from = Address(username, 'Smart Toilet Management')
+    ..recipients.add('IIT2019086@iiita.ac.in')
+    ..ccRecipients.addAll(['IIT2019029@iiita.ac.in', 'IIT2019030@iiita.ac.in'])
+    ..bccRecipients.add(Address('IIT2019085@iiita.ac.in'))
+    ..subject = 'Alert!!'
+    ..text =
+        'Toilets are unhygienic and need cleaning.\nPlease clean the toilets.'
+    ..html =
+        "<p>Toilets are unhygienic and need cleaning.\nPlease clean the toilets.</p>";
+
+  try {
+    final sendReport = await send(message, smtpServer);
+    print('Message sent: ' + sendReport.toString());
+  } on MailerException catch (e) {
+    print('Message not sent.');
+    for (var p in e.problems) {
+      print('Problem: ${p.code}: ${p.msg}');
+    }
   }
 }
