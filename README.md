@@ -1,23 +1,4 @@
-# ***Welcome*** 
-#
 
-## **Project No.**  :  *14*
-#
-## **Group No.** :  *16*
-#
-
-
-## ***Team Members***
-
-
-| Enrollment No. | Name              | Github Id                         |
-| :------------- | :---------------- | :-------------------------------- |
-| IIT2019029     | Puneet Singhwaiya | <https://github.com/Puneet140500> |
-| IIT2019030     | Kaushal Kumar     | <https://github.com/kingkapoork>  |
-| IIT2019085     | Aniket Jaiswal    | <https://github.com/DevilAJ>      |
-| IIT2019086     | Ankit Chauhan     | <https://github.com/Mystery137>   |
-
-#
 ## ***Project Description***
 
  **Smart Toilet Cleaning Management System** that monitors the hygiene within the toilet and generate alerts or alarms for the staff members if the toilet requires any attention.
